@@ -1,89 +1,55 @@
-# Maison de Beauté
+# Maison de Beauté – Premium Salon Web Experience
 
-An editorial-quality, luxury website template designed specifically for premium beauty salons, cosmetic studios, and wellness centers. Maison de Beauté combines elegant typography, fluid animations, and a minimalist aesthetic to create a digital experience that reflects the high standards of a modern luxury brand.
+A high-end, responsive web application designed for luxury beauty salons, spas, and wellness clinics. This project provides a refined digital storefront that prioritizes user experience, fluid animations, and professional aesthetics.
 
-## ✨ Production Readiness & Future Architecture (Next.js)
+## Overview
 
-While this repository currently runs as an optimized React SPA, it has been architecturally prepared for a seamless port to **Next.js (App Router)** for enterprise-grade production deployment.
+Maison de Beauté is built with modern web standards in mind, ensuring a seamless experience across all devices—from mobile phones to ultra-wide desktop monitors. It features a bilingual interface (English and German), a custom design system based on luxury branding principles, and fluid layouts. The architecture relies on Next.js for optimal performance, fast loading times, and a clean codebase.
 
-### Current SEO & Performance Implementations
-We have already integrated production-ready SEO practices into the React build:
-- **`react-helmet-async`**: Dynamic `<head>` management for meta tags.
-- **JSON-LD Structured Data**: LocalBusiness schema configured for local SEO.
-- **Canonical URLs & Open Graph**: Pre-configured for proper social media unfurling and search indexing.
-- **Semantic HTML5**: Strict adherence to heading hierarchies (H1-H6) and landmark elements.
-- **`robots.txt` & `sitemap.xml`**: Included in the `public` directory.
+## Key Features
 
-### Next Phase: The Next.js Migration Strategy
-To achieve 90-100 Lighthouse SEO scores and robust Server-Side Rendering (SSR), the planned production stack involves porting these components into Next.js:
+- **Premium UI/UX:** A minimalist, elegant design system using tailored typography (Cormorant Garamond for headings, Inter for body text) and a curated "sand and gold" color palette.
+- **Fully Responsive (Mobile-First):** Engineered to look and feel great on any screen size. Features a custom mobile drawer navigation, fluid typography, and touch-friendly interaction targets (minimum 44x44px).
+- **Bilingual Interface:** Built-in internationalization context supporting seamless switching between English (EN) and German (DE) without page reloads.
+- **Smooth Animations:** Integrated with Motion for sophisticated, 60fps scroll animations, staggered reveals, and page transitions that respect users' reduced-motion preferences.
+- **Modern Architecture:** Utilizing the Next.js App Router and Tailwind CSS v4 for clean, maintainable, and highly performant code.
 
-| Layer | Target Production Tech | Why |
-|-------|-----------------------|-----|
-| **Framework** | **Next.js 14+ (App Router)** | SSR, SSG, React Server Components, faster initial page loads |
-| **Styling** | **Tailwind CSS v4** | Retained for utility-first responsive styling |
-| **SEO** | **Next.js Metadata API** | Will replace `react-helmet-async` for native server-side meta tags |
-| **Image Optimization** | **`next/image`** | Automatic WebP/AVIF formatting and layout shift prevention |
-| **Analytics** | **Google Analytics 4 / Vercel** | Out-of-the-box performance and event tracking |
+## Tech Stack
 
-## 🛠 Current Tech Stack
+- **Framework:** [Next.js](https://nextjs.org/) (React)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Motion](https://motion.dev/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Language:** TypeScript
 
-- **Framework**: [React 19](https://react.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **SEO**: `react-helmet-async`
-- **Animations**: [Motion](https://motion.dev/) (Framer Motion)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Routing**: React Router DOM
+## Getting Started
 
-## 🚀 Getting Started
+To run this project locally, ensure you have Node.js installed, then follow these steps:
 
-Follow these steps to set up the project locally on your machine.
-
-### Prerequisites
-
-Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and npm installed.
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yashwaldia/salon-template.git
-   cd salon-template
-   ```
-
-2. Install dependencies:
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. Start the development server:
+2. **Run the development server:**
    ```bash
    npm run dev
    ```
 
-4. Open your browser and navigate to the local URL provided by Vite (usually `http://localhost:3000`).
+3. **View the application:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
-```text
-├── src/
-│   ├── components/      # Reusable UI components and page sections
-│   │   ├── home/        # Specific sections for the landing page
-│   │   └── seo/         # Dynamic metadata & JSON-LD injectors
-│   ├── lib/             # Utility functions (e.g., tailwind class merging)
-│   ├── index.css        # Global CSS, font imports, and Tailwind config
-│   ├── main.tsx         # Application entry point
-│   └── App.tsx          # Root component and layout structure
-├── public/              # Static assets (robots.txt, sitemap.xml)
-├── index.html           # HTML template
-├── vite.config.ts       # Vite bundler configuration
-└── package.json         # Dependencies and scripts
-```
+- `/src/app` - Next.js App Router pages, routing configuration, and global layouts.
+- `/src/components` - Reusable UI components organized by domain (`home`, `layout`, etc.).
+- `/src/views` - High-level page components separating the routing from the UI view logic.
+- `/src/contexts` - React Context providers (e.g., `LanguageContext` for i18n translations).
+- `/src/lib` - Shared utility functions and helpers.
 
-## 🎨 Customization & Content Management
+## Design & Accessibility Guidelines
 
-The sections are built to be highly modular. Textual content, image URLs, and service offerings are mapped from structured data arrays located at the top of their respective component files. This architecture will seamlessly translate into Server Components or CMS-driven data fetching in the Next.js migration phase.
-
-## 📄 License
-
-This project is licensed under the MIT License. Feel free to use it for your personal or commercial projects.
+This project was built adhering to strict agency-level engineering standards:
+- **Accessibility (WCAG 2.2 AA):** Semantic HTML, sufficient color contrast, and functional focus states.
+- **Responsive Design:** Extensive use of CSS Flexbox and Grid. Avoids rigid fixed positioning to ensure layouts resize naturally without horizontal scrolling.
+- **Performance (Core Web Vitals):** Prioritizes fast Largest Contentful Paint (LCP) and minimal Cumulative Layout Shift (CLS).
