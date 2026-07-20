@@ -2,7 +2,7 @@
 
 An editorial-quality, luxury website template designed specifically for premium beauty salons, cosmetic studios, and wellness centers. Maison de Beauté combines elegant typography, fluid animations, and a minimalist aesthetic to create a digital experience that reflects the high standards of a modern luxury brand.
 
-## ✨ Production Readiness & Future Architecture (Next.js)
+## Production Readiness & Future Architecture (Next.js)
 
 While this repository currently runs as an optimized React SPA, it has been architecturally prepared for a seamless port to **Next.js (App Router)** for enterprise-grade production deployment.
 
@@ -25,7 +25,7 @@ To achieve 90-100 Lighthouse SEO scores and robust Server-Side Rendering (SSR), 
 | **Image Optimization** | **`next/image`** | Automatic WebP/AVIF formatting and layout shift prevention |
 | **Analytics** | **Google Analytics 4 / Vercel** | Out-of-the-box performance and event tracking |
 
-## 🛠 Current Tech Stack
+## Current Tech Stack
 
 - **Framework**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
@@ -35,7 +35,7 @@ To achieve 90-100 Lighthouse SEO scores and robust Server-Side Rendering (SSR), 
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Routing**: React Router DOM
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to set up the project locally on your machine.
 
@@ -63,7 +63,7 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and n
 
 4. Open your browser and navigate to the local URL provided by Vite (usually `http://localhost:3000`).
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ├── src/
@@ -80,7 +80,7 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and n
 └── package.json         # Dependencies and scripts
 ```
 
-## 🎨 Customization & Content Management
+## Customization & Content Management
 
 The sections are built to be highly modular. Textual content, image URLs, and service offerings are mapped from structured data arrays located at the top of their respective component files. This architecture will seamlessly translate into Server Components or CMS-driven data fetching in the Next.js migration phase.
 
